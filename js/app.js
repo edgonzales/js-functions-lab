@@ -119,3 +119,21 @@ function numArgs(arg){
 console.log(numArgs('a'));
 console.log(numArgs(1));
 console.log(numArgs('jello'));
+
+/* 7. Define a function, as a function declaration, reverseString that takes a string, reverses the characters, and returns it. For example, reverseString('rockstar'); would return the string "ratskcor".
+*/
+
+function reverseString(text) {
+    // separates the text parameter into an array, where each character is given a position in an array
+    let splitString = text.split('');
+    // reverses the individual characters in the split array
+    let reverseArray = splitString.reverse();
+    // combines the separated characters into one array with one position [0] and creates a single text
+    let joinArray = reverseArray.join('');
+    // returns the reversed text
+    return joinArray;
+}
+
+console.log(reverseString('tom'));
+// credit: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
+// comments are made in my own words
