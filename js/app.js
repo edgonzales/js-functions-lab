@@ -80,3 +80,15 @@ function isCharAVowel(character){
         return false;
     }
 }
+
+/* 4. Define a function, as a function expression, sumArray that takes an array of numbers and returns the sum of those numbers. For example, sumArray([2, 4, 5]); would return 11.
+*/
+let sum = 0;
+function sumArray(numArr){
+    numArr.forEach(function(num) {
+        sum += num;
+    })
+    return sum;
+}
+
+console.log(sumArray([1,3,2]));
