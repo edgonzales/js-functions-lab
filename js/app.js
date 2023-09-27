@@ -92,3 +92,16 @@ function sumArray(numArr){
 }
 
 console.log(sumArray([1,3,2]));
+
+/* 5. Define a function, as a function declaration, multiplyArray that takes an array of numbers and returns the product those numbers. For example, multiplyArray([2, 4, 5]); would return 40. 
+*/
+
+let total = 1;
+function multiplyArray(numArr){
+    numArr.forEach(function(num) {
+        total *= num;
+    })
+    return total;
+}
+
+console.log(multiplyArray([2,4,2]));
