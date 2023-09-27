@@ -105,3 +105,17 @@ function multiplyArray(numArr){
 }
 
 console.log(multiplyArray([2,4,2]));
+
+/* 6.
+Define a function, as a function expression, numArgs that returns the number of arguments passed to the function when called.
+*/
+
+let argSum = 0;
+function numArgs(arg){
+    argSum += 1;
+    return argSum;
+}
+
+console.log(numArgs('a'));
+console.log(numArgs(1));
+console.log(numArgs('jello'));
