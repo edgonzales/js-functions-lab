@@ -111,14 +111,11 @@ Define a function, as a function expression, numArgs that returns the number of 
 */
 
 let argSum = 0;
-function numArgs(arg){
-    argSum += 1;
-    return argSum;
+const numArgsExpression = function numArgs(...nums){
+    return argSum = nums.length;
 }
 
-console.log(numArgs('a'));
-console.log(numArgs(1));
-console.log(numArgs('jello'));
+console.log(numArgsExpression('a', 'b', 'aaa'));
 
 /* 7. Define a function, as a function declaration, reverseString that takes a string, reverses the characters, and returns it. For example, reverseString('rockstar'); would return the string "ratskcor".
 */
@@ -137,3 +134,36 @@ function reverseString(text) {
 console.log(reverseString('tom'));
 // credit: https://www.freecodecamp.org/news/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb/
 // comments are made in my own words
+
+/* 8. Define a function, as a function expression, longestStringInArray that takes an array of strings as an argument and returns the length of the longest string.
+*/
+
+let longestStringInArray = function stringArray(stringArr) {
+    let currentLongestString = 0;
+    stringArr.forEach(
+        function(stringElement) {
+            if (currentLongestString < stringElement.length) {
+                currentLongestString = stringElement.length;
+            }
+        }
+    )
+    return currentLongestString;
+}
+
+console.log(longestStringInArray(['Bob', 'Timo', 'Gordon']));
+
+/* 9. Define a function, as a function declaration, stringsLongerThan that takes an array of strings and a number as arguments; and returns an array of the strings that are longer than the number passed in. For example, stringsLongerThan(['say', 'hello', 'in', 'the', 'morning'], 3); would return ["hello", "morning"].
+*/
+
+function stringsLongerThan (strArray, number) {
+        let longestStringArray = [];
+        strArray.forEach(function(str) {
+            if(str.length > number) {
+                longestStringArray.push(str);
+            }
+        }
+    )
+    return longestStringArray;
+}
+
+console.log(stringsLongerThan(['say', 'hello', 'in', 'the', 'morning, outside'], 5));
